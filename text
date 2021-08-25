@@ -1,0 +1,8 @@
+create postgres user
+# apt install npm
+# apt install postgres postgres-contrib
+# sudo -i -u postgres
+# psql
+# ALTER USER postgres WITH PASSWORD 'password';
+# npm install 
+# node app.js
