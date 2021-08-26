@@ -1,5 +1,5 @@
 FROM      node:alpine
-RUN       mkdir employee
+RUN       mkdir /employee
 WORKDIR   /employee
 COPY       . ./employee
 WORKDIR   /employee
