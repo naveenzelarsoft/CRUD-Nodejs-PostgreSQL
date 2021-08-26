@@ -1,6 +1,7 @@
 FROM      node:alpine
-COPY       . ./employee
+RUN       mkdir employee
 WORKDIR   /employee
+COPY       . .
 RUN       npm install
-EXPOSE   80
-CMD      [ "node", "app.js" ]
+EXPOSE    80
+CMD       [ "node", "app.js" ]
