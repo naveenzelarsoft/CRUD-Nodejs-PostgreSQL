@@ -10,6 +10,6 @@
 FROM      node:alpine
 COPY       . ./employee
 WORKDIR   /employee
-EXPOSE    80
 RUN       npm install
+EXPOSE    80
 CMD      [ "node", "app.js" ]
