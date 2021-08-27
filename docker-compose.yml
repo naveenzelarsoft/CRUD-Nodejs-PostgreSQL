@@ -29,7 +29,5 @@ services:
        connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
     depends_on:
       - postgres
-    links:
-      - postgres
 volumes:
     testdb:
