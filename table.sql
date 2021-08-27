@@ -1,3 +1,5 @@
+ALTER USER postgres WITH PASSWORD 'postgres';
+
 CREATE DATABASE testdb;
 
 \c testdb;
