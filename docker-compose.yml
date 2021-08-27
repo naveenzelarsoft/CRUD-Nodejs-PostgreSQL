@@ -26,8 +26,8 @@ services:
           - 4000
     ports:
       - "4000:4000"
-    environment:
-       var connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
+#    environment:
+#       var connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
     depends_on:
       - postgres
 volumes:
