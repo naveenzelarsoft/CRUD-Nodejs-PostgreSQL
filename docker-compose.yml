@@ -17,12 +17,9 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: testdb
 
-
   nodejs:
     image: employee:v1
     container_name: employees
-    expose:
-      - 4000
     ports:
       - "4000:4000"
     environment:
