@@ -25,7 +25,7 @@ services:
     environment:
         DB_USER: postgres
         DB_PASSWORD: postgres
-        DB_HOST: postgres
+        DB: testdb
     depends_on:
       - postgres
     links:
