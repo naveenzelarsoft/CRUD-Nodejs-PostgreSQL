@@ -1,3 +1,38 @@
-FROM   postgres
-ENV    POSTGRES_PASSWORD postgres
-CMD    CREATE TABLE employee (id serial NOT NULL,name character varying(200) NOT NULL,job character varying(200) NOT NULL,department character varying(20) NOT NULL,salary int NOT NULL,hire_date date NOT NULL);
+#FROM   postgres
+#ENV    POSTGRES_PASSWORD postgres
+#CMD    CREATE TABLE employee (id serial NOT NULL,name character varying(200) NOT NULL,job character varying(200) NOT NULL,department character varying(20) NOT NULL,salary int NOT NULL,hire_date date NOT NULL);
+#CMD    []
+
+version: "3"
+services:
+  postgres:
+    image: postgres:latest
+    network_mode: bridge
+    container_name: postgres
+    expose:
+        -5432
+    ports:
+      - "5432:5432"
+    volumes:
+          - testdb:/var/lib/postgresql/data
+          - ./table.sql:/docker-entrypoint-initdb.d/table.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: testdb
+
+
+  nodejs:
+    image: employee:v1
+    network_mode: bridge
+    container_name: employees
+    expose:
+      - 4000
+    ports:
+      - 4000:4000
+#    environment:
+#      - connectionString=Server=localhost,5432;database=testdb;User Id=postgres;Password=postgres
+    depends_on:
+      - postgres
+    links:
+      - postgres
