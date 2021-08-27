@@ -27,7 +27,7 @@ services:
     expose:
       - 4000
     ports:
-      - 4000:4000
+      - "4000:4000"
 #    environment:
 #      - connectionString=Server=localhost,5432;database=testdb;User Id=postgres;Password=postgres
     depends_on:
