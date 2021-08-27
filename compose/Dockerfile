@@ -10,7 +10,7 @@ services:
     network_mode: bridge
     container_name: postgres
     expose:
-        -5432
+        - 5432
     ports:
       - "5432:5432"
     volumes:
