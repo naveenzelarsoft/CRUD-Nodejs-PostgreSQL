@@ -21,7 +21,7 @@ services:
 
 
   nodejs:
-    image: employee:v1
+    image: employee:v2
     network_mode: bridge
     container_name: employees
     expose:
