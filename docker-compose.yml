@@ -18,12 +18,13 @@ services:
       POSTGRES_DB: testdb
 
   nodejs:
-    image: employee:v1
-    container_name: employees
+    build:
+       context: .
+#    container_name: employees
     ports:
       - "4000:4000"
-    environment:
-        connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
+#    environment:
+#       connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
     depends_on:
       - postgres
     links:
