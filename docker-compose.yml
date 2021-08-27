@@ -23,7 +23,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-        connectionString : "postgres://postgres:postgres@localhost:5432/testdb"
+        connectionString: "postgres://postgres:postgres@localhost:5432/testdb"
     depends_on:
       - postgres
     links:
