@@ -13,9 +13,9 @@ services:
           - testdb:/var/lib/postgresql/data
           - ./table.sql:/docker-entrypoint-initdb.d/table.sql
     environment:
-      PSQL_USER: postgres
-      PSQL_PASSWORD: postgres
-      PSQL_DB: testdb
+      Postgres user: postgres
+      Postgres password: postgres
+      Postgres_DB: testdb
 
   employees:
     build:
