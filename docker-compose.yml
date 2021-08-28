@@ -28,7 +28,7 @@ services:
       - "4000:4000"
     environment:
        DATABASE_URL: postgres://postgres:postgres@postgres:5432/testdb
-       PGHOST: localhost
+       PGHOST: host.docker.internal
        PGUSER: "postgres"
        PGPASSWORD: "postgres"
 #       User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=testdb;
