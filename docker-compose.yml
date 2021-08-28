@@ -27,7 +27,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-       connectionString: postgres://postgres:postgres@postgres:5432/testdb
+       connectionString: postgres://postgres:postgres@localhost:5432/testdb
        POSTGRES_HOST: host.docker.internal
        POSTGRES_USER: postgres
        POSTGRES_PASSWORD: postgres
