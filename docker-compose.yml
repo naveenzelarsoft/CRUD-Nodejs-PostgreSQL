@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-          - testdb:/var/lib/postgresql/data
+#          - testdb:/var/lib/postgresql/data
           - ./table.sql:/docker-entrypoint-initdb.d/table.sql
     environment:
       POSTGRES_USER: postgres
