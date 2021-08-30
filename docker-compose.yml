@@ -9,9 +9,9 @@ services:
     container_name: postgres
     ports:
       - "5432:5432"
-    volumes:
+#    volumes:
 #          - testdb:/var/lib/postgresql/data
-          - ./table.sql:/docker-entrypoint-initdb.d/table.sql
+#          - ./table.sql:/docker-entrypoint-initdb.d/table.sql
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
