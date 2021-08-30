@@ -1,7 +1,5 @@
 ALTER USER postgres WITH PASSWORD 'postgres';
 
-DROP DATABASE IF EXISTS testdb;
-
 CREATE DATABASE testdb;
 
 \c testdb;
