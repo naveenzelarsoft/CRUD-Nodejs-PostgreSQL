@@ -20,19 +20,19 @@ services:
     build:
        context: .
 #    container_name: employees
-    expose:
-          - 4000
+#    expose:
+#          - 4000
     ports:
       - "4000:4000"
-    environment:
-     connectionString: "postgres://postgres:postgres@postgres:5432/testdb"
-     POSTGRES_HOST: host.docker.internal
-     POSTGRES_USER: postgres
-     POSTGRES_PASSWORD: postgres
-     POSTGRES_DB: testdb
+#    environment:
+#     connectionString: "postgres://postgres:postgres@postgres:5432/testdb"
+#     POSTGRES_HOST: host.docker.internal
+#     POSTGRES_USER: postgres
+#     POSTGRES_PASSWORD: postgres
+#     POSTGRES_DB: testdb
 #       User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=testdb;
 #       connectionString: "postgres://postgres:postgres@postgres:5432/testdb"
 #    depends_on:
 #      - postgres
-volumes:
-    testdb:
+#volumes:
+#    testdb:
