@@ -32,7 +32,7 @@ services:
 #       POSTGRES_DB: testdb
 #       User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=testdb;
 #       connectionString: "postgres://postgres:postgres@postgres:5432/testdb"
-    depends_on:
-      - postgres
+#    depends_on:
+#      - postgres
 volumes:
     testdb:
